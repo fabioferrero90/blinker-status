@@ -1,7 +1,7 @@
 url: https://jentlukmtglyfghtozvs.supabase.co/functions/v1/health-check
-status: down
-code: 500
-responseTime: 305
-lastUpdated: 2026-10-02T13:59:30.082Z
+status: up
+code: 200
+responseTime: 785
+lastUpdated: 2026-10-02T14:26:42.287Z
 startTime: 2026-10-02T13:56:31.281Z
 generator: Upptime <https://github.com/upptime/upptime>
