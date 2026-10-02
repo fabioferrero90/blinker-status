@@ -27,7 +27,7 @@ sites:
     # la chiave "publishable"/anon: per progetto, pensata per essere
     # pubblica (e' quella usata lato client app), non un segreto.
     headers:
-      - "apikey: sb_pub…M4y7"
+      - "apikey: sb_publishable_AvEiIGFjLphSe3XqOvCEBA_ayz2M4y7"
     expectedStatusCodes:
       - 200
 
@@ -42,7 +42,9 @@ sites:
       - 200
 
   - name: Certificato SSL blinker-app.com
-    url: https://blinker-app.com
+    # Il check ssl apre una connessione TLS diretta: vuole solo l'hostname,
+    # NON uno schema https:// (altrimenti e' un errore DNS, non un vero down).
+    url: blinker-app.com
     check: ssl
 
 status-website:
