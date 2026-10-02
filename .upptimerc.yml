@@ -10,6 +10,11 @@ sites:
 
   - name: Supabase Auth API
     url: https://jentlukmtglyfghtozvs.supabase.co/auth/v1/health
+    # L'endpoint richiede l'header apikey del gateway Supabase. Questa e'
+    # la chiave "publishable"/anon: per progetto, pensata per essere
+    # pubblica (e' quella usata lato client app), non un segreto.
+    headers:
+      - "apikey: sb_publishable_AvEiIGFjLphSe3XqOvCEBA_ayz2M4y7"
     expectedStatusCodes:
       - 200
 
