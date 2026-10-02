@@ -47,7 +47,7 @@ sites:
 
 status-website:
   cname: status.blinker-app.com
-  logoUrl: /logo.png
+  logoUrl: https://raw.githubusercontent.com/fabioferrero90/blinker-status/main/assets/logo.png
   name: Blinker Status
   introTitle: "**Stato dei servizi Blinker**"
   introMessage: Monitoraggio in tempo reale di app, siti e servizi dell'ecosistema Blinker. Controlli automatici ogni 5 minuti, powered by [Upptime](https://github.com/upptime/upptime) — nessun server dedicato.
