@@ -5,6 +5,9 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
+      - name: Check bot identity
+        run: |
+          curl -s "https://api.telegram.org/bot${{ secrets.NOTIFICATION_TELEGRAM_BOT_KEY }}/getMe"
       - name: Send test message via Telegram Bot API
         run: |
           curl -s -X POST "https://api.telegram.org/bot${{ secrets.NOTIFICATION_TELEGRAM_BOT_KEY }}/sendMessage" \
