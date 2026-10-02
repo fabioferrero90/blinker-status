@@ -1,0 +1,12 @@
+name: Test Telegram Notification
+on:
+  workflow_dispatch:
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send test message via Telegram Bot API
+        run: |
+          curl -s -X POST "https://api.telegram.org/bot${{ secrets.NOTIFICATION_TELEGRAM_BOT_KEY }}/sendMessage" \
+            -d "chat_id=${{ secrets.NOTIFICATION_TELEGRAM_CHAT_ID }}" \
+            -d "text=🧪 Messaggio di test da Blinker Status (Upptime). Se lo vedi, il bot funziona!"
