@@ -1,0 +1,35 @@
+# Blinker — Status Page (Upptime)
+# https://upptime.js.org/docs/configuration
+
+owner: fabioferrero90
+repo: blinker-status
+
+sites:
+  - name: Blinker App (sito)
+    url: https://blinker-app.com
+
+  - name: Supabase Auth API
+    url: https://jentlukmtglyfghtozvs.supabase.co/auth/v1/health
+    expectedStatusCodes:
+      - 200
+
+  - name: Blinker Health Check
+    url: https://jentlukmtglyfghtozvs.supabase.co/functions/v1/health-check
+    expectedStatusCodes:
+      - 200
+
+status-website:
+  cname: status.blinker-app.com
+  name: Blinker Status
+  introTitle: "**Stato dei servizi Blinker**"
+  introMessage: Monitoraggio in tempo reale dei servizi Blinker. Controlli automatici ogni 5 minuti, powered by [Upptime](https://github.com/upptime/upptime) — nessun server dedicato.
+  navbar:
+    - title: Status
+      href: /
+    - title: GitHub
+      href: https://github.com/fabioferrero90/blinker-status
+
+# Secret allowlist: niente oltre ai secret di notifica Telegram, già gestiti
+# automaticamente da Upptime (NOTIFICATION_TELEGRAM*). Nessun secret custom
+# qui: i token Supabase/Resend restano SOLO lato Edge Function, mai esposti
+# in questo repo pubblico.
