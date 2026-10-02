@@ -1,0 +1,58 @@
+[
+  {
+    "name": "Blinker App (sito)",
+    "url": "https://blinker-app.com",
+    "icon": "https://icons.duckduckgo.com/ip3/blinker-app.com.ico",
+    "slug": "blinker-app-sito",
+    "status": "up",
+    "uptime": "100.00%",
+    "uptimeDay": "100.00%",
+    "uptimeWeek": "100.00%",
+    "uptimeMonth": "100.00%",
+    "uptimeYear": "100.00%",
+    "time": 546,
+    "timeDay": 546,
+    "timeWeek": 546,
+    "timeMonth": 546,
+    "timeYear": 546,
+    "dailyMinutesDown": {}
+  },
+  {
+    "name": "Supabase Auth API",
+    "url": "https://jentlukmtglyfghtozvs.supabase.co/auth/v1/health",
+    "icon": "https://icons.duckduckgo.com/ip3/jentlukmtglyfghtozvs.supabase.co.ico",
+    "slug": "supabase-auth-api",
+    "status": "up",
+    "uptime": "8.39%",
+    "uptimeDay": "8.39%",
+    "uptimeWeek": "8.39%",
+    "uptimeMonth": "8.39%",
+    "uptimeYear": "8.39%",
+    "time": 209,
+    "timeDay": 209,
+    "timeWeek": 209,
+    "timeMonth": 209,
+    "timeYear": 209,
+    "dailyMinutesDown": {
+      "2026-10-02": 3
+    }
+  },
+  {
+    "name": "Blinker Health Check",
+    "url": "https://jentlukmtglyfghtozvs.supabase.co/functions/v1/health-check",
+    "icon": "https://icons.duckduckgo.com/ip3/jentlukmtglyfghtozvs.supabase.co.ico",
+    "slug": "blinker-health-check",
+    "status": "up",
+    "uptime": "100.00%",
+    "uptimeDay": "100.00%",
+    "uptimeWeek": "100.00%",
+    "uptimeMonth": "100.00%",
+    "uptimeYear": "100.00%",
+    "time": 516,
+    "timeDay": 516,
+    "timeWeek": 516,
+    "timeMonth": 516,
+    "timeYear": 516,
+    "dailyMinutesDown": {}
+  }
+]
