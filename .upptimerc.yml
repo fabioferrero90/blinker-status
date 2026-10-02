@@ -36,6 +36,8 @@ sites:
       - 200
 
   - name: Stato generale
+    # Slug esplicito = quello generato dal vecchio nome "Blinker Health Check".
+    slug: blinker-health-check
     icon: https://raw.githubusercontent.com/fabioferrero90/blinker-status/main/assets/logo.png
     url: https://jentlukmtglyfghtozvs.supabase.co/functions/v1/health-check
     expectedStatusCodes:
