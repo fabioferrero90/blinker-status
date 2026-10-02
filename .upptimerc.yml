@@ -7,6 +7,19 @@ repo: blinker-status
 sites:
   - name: Blinker App (sito)
     url: https://blinker-app.com
+    icon: https://blinker-app.com/favicon.ico
+
+  - name: Blinker Landing (get)
+    url: https://get.blinker-app.com
+    icon: https://get.blinker-app.com/favicon.ico
+
+  - name: Blinker Network
+    url: https://network.blinker-app.com
+    icon: https://network.blinker-app.com/favicon.ico
+
+  - name: Blinker Merch
+    url: https://merch.blinker-app.com
+    icon: https://merch.blinker-app.com/favicon.ico
 
   - name: Supabase Auth API
     url: https://jentlukmtglyfghtozvs.supabase.co/auth/v1/health
@@ -14,7 +27,7 @@ sites:
     # la chiave "publishable"/anon: per progetto, pensata per essere
     # pubblica (e' quella usata lato client app), non un segreto.
     headers:
-      - "apikey: sb_publishable_AvEiIGFjLphSe3XqOvCEBA_ayz2M4y7"
+      - "apikey: sb_pub…M4y7"
     expectedStatusCodes:
       - 200
 
@@ -23,14 +36,28 @@ sites:
     expectedStatusCodes:
       - 200
 
+  - name: Invio Email (Resend)
+    url: https://jentlukmtglyfghtozvs.supabase.co/functions/v1/health-check?check=email
+    expectedStatusCodes:
+      - 200
+
+  - name: Certificato SSL blinker-app.com
+    url: https://blinker-app.com
+    check: ssl
+
 status-website:
   cname: status.blinker-app.com
+  logoUrl: /logo.png
   name: Blinker Status
   introTitle: "**Stato dei servizi Blinker**"
-  introMessage: Monitoraggio in tempo reale dei servizi Blinker. Controlli automatici ogni 5 minuti, powered by [Upptime](https://github.com/upptime/upptime) — nessun server dedicato.
+  introMessage: Monitoraggio in tempo reale di app, siti e servizi dell'ecosistema Blinker. Controlli automatici ogni 5 minuti, powered by [Upptime](https://github.com/upptime/upptime) — nessun server dedicato.
   navbar:
     - title: Status
       href: /
+    - title: Blinker App
+      href: https://blinker-app.com
+    - title: Sito
+      href: https://get.blinker-app.com
     - title: GitHub
       href: https://github.com/fabioferrero90/blinker-status
 
