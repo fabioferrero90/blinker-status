@@ -8,6 +8,13 @@ jobs:
       - name: Check bot identity
         run: |
           curl -s "https://api.telegram.org/bot${{ secrets.NOTIFICATION_TELEGRAM_BOT_KEY }}/getMe"
+      - name: Check updates (real chat ids seen by the bot)
+        run: |
+          curl -s "https://api.telegram.org/bot${{ secrets.NOTIFICATION_TELEGRAM_BOT_KEY }}/getUpdates" | python3 -m json.tool
+      - name: Print configured chat id length/repr
+        run: |
+          echo "Secret chat id as seen by workflow (repr):"
+          printf '%s' "${{ secrets.NOTIFICATION_TELEGRAM_CHAT_ID }}" | od -c | head -5
       - name: Send test message via Telegram Bot API
         run: |
           curl -s -X POST "https://api.telegram.org/bot${{ secrets.NOTIFICATION_TELEGRAM_BOT_KEY }}/sendMessage" \
