@@ -21,7 +21,7 @@ sites:
   - name: Blinker Health Check
     url: https://jentlukmtglyfghtozvs.supabase.co/functions/v1/health-check
     expectedStatusCodes:
-      - 599
+      - 200
 
 status-website:
   cname: status.blinker-app.com
