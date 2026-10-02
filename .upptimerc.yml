@@ -21,7 +21,11 @@ sites:
     url: https://merch.blinker-app.com
     icon: https://merch.blinker-app.com/favicon.ico
 
-  - name: Supabase Auth API
+  - name: Autenticazione
+    # Slug esplicito = quello che Upptime avrebbe generato dal vecchio nome
+    # "Supabase Auth API", per non perdere la storia/i grafici già raccolti.
+    slug: supabase-auth-api
+    icon: https://raw.githubusercontent.com/fabioferrero90/blinker-status/main/assets/logo.png
     url: https://jentlukmtglyfghtozvs.supabase.co/auth/v1/health
     # L'endpoint richiede l'header apikey del gateway Supabase. Questa e'
     # la chiave "publishable"/anon: per progetto, pensata per essere
@@ -31,12 +35,16 @@ sites:
     expectedStatusCodes:
       - 200
 
-  - name: Blinker Health Check
+  - name: Stato generale
+    icon: https://raw.githubusercontent.com/fabioferrero90/blinker-status/main/assets/logo.png
     url: https://jentlukmtglyfghtozvs.supabase.co/functions/v1/health-check
     expectedStatusCodes:
       - 200
 
-  - name: Invio Email (Resend)
+  - name: Invio notifiche email
+    # Slug esplicito = quello generato dal vecchio nome "Invio Email (Resend)".
+    slug: invio-email-resend
+    icon: https://raw.githubusercontent.com/fabioferrero90/blinker-status/main/assets/logo.png
     url: https://jentlukmtglyfghtozvs.supabase.co/functions/v1/health-check?check=email
     expectedStatusCodes:
       - 200
@@ -52,16 +60,15 @@ status-website:
   logoUrl: https://raw.githubusercontent.com/fabioferrero90/blinker-status/main/assets/logo.png
   name: Blinker Status
   introTitle: "**Stato dei servizi Blinker**"
-  introMessage: Monitoraggio in tempo reale di app, siti e servizi dell'ecosistema Blinker. Controlli automatici ogni 5 minuti, powered by [Upptime](https://github.com/upptime/upptime) — nessun server dedicato.
+  introMessage: Monitoraggio in tempo reale di app, siti e servizi dell'ecosistema Blinker. Controlli automatici ogni 5 minuti.
   navbar:
-    - title: Status
-      href: /
-    - title: Blinker App
-      href: https://blinker-app.com
-    - title: Sito
+    - title: Download app
       href: https://get.blinker-app.com
-    - title: GitHub
-      href: https://github.com/fabioferrero90/blinker-status
+
+# Footer di default di Upptime linka al repo GitHub ("This page is open
+# source..."): lo sovrascriviamo per non esporre il link GitHub in pagina.
+i18n:
+  footer: ""
 
 # Secret allowlist: niente oltre ai secret di notifica Telegram, già gestiti
 # automaticamente da Upptime (NOTIFICATION_TELEGRAM*). Nessun secret custom
