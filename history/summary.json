@@ -23,19 +23,17 @@
     "icon": "https://icons.duckduckgo.com/ip3/jentlukmtglyfghtozvs.supabase.co.ico",
     "slug": "supabase-auth-api",
     "status": "up",
-    "uptime": "8.39%",
-    "uptimeDay": "8.39%",
-    "uptimeWeek": "8.39%",
-    "uptimeMonth": "8.39%",
-    "uptimeYear": "8.39%",
+    "uptime": "100.00%",
+    "uptimeDay": "100.00%",
+    "uptimeWeek": "100.00%",
+    "uptimeMonth": "100.00%",
+    "uptimeYear": "100.00%",
     "time": 209,
     "timeDay": 209,
     "timeWeek": 209,
     "timeMonth": 209,
     "timeYear": 209,
-    "dailyMinutesDown": {
-      "2026-10-02": 3
-    }
+    "dailyMinutesDown": {}
   },
   {
     "name": "Blinker Health Check",
