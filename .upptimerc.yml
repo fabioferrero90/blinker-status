@@ -21,6 +21,10 @@ sites:
     url: https://merch.blinker-app.com
     icon: https://merch.blinker-app.com/favicon.ico
 
+  - name: Blinker Business
+    url: https://business.blinker-app.com
+    icon: https://business.blinker-app.com/square.png
+
   - name: Autenticazione
     # Slug esplicito = quello che Upptime avrebbe generato dal vecchio nome
     # "Supabase Auth API", per non perdere la storia/i grafici già raccolti.
@@ -63,7 +67,7 @@ status-website:
   favicon: https://raw.githubusercontent.com/fabioferrero90/blinker-status/main/assets/logo.png
   name: Blinker Status
   introTitle: "**Stato dei servizi Blinker**"
-  introMessage: Monitoraggio in tempo reale di app, siti e servizi dell'ecosistema Blinker. Controlli automatici ogni 5 minuti.
+  introMessage: Monitoraggio in tempo reale di app, siti e servizi dell'ecosistema Blinker. Controlli automatici più volte al giorno.
   navbar:
     - title: Download app
       href: https://get.blinker-app.com

@@ -1,6 +1,6 @@
 # [📈 Live Status](https://status.blinker-app.com): <!--live status--> **🟩 All systems operational**
 
-This repository contains the open-source uptime monitor and status page for [Fabio Ferrero](fabio.ff90@gmail.com), powered by [Upptime](https://github.com/upptime/upptime).
+Monitoraggio dello stato dei servizi Blinker (app, siti e backend), realizzato con [Upptime](https://github.com/upptime/upptime).
 
 [![Uptime CI](https://github.com/fabioferrero90/blinker-status/workflows/Uptime%20CI/badge.svg)](https://github.com/fabioferrero90/blinker-status/actions/workflows/uptime.yml)
 [![Response Time CI](https://github.com/fabioferrero90/blinker-status/workflows/Response%20Time%20CI/badge.svg)](https://github.com/fabioferrero90/blinker-status/actions/workflows/response-time.yml)
