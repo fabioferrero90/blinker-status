@@ -5,59 +5,62 @@ owner: fabioferrero90
 repo: blinker-status
 
 sites:
-  - name: Blinker App (sito)
-    url: https://blinker-app.com
-    icon: https://blinker-app.com/favicon.ico
+  # Nomi pensati per chi usa Blinker. Lo `slug` resta quello di prima, così la storia e i grafici non si perdono.
 
-  - name: Blinker Landing (get)
-    url: https://get.blinker-app.com
-    icon: https://get.blinker-app.com/favicon.ico
+  - name: App Blinker (dati e servizi)
+    slug: blinker-health-check
+    icon: https://raw.githubusercontent.com/fabioferrero90/blinker-status/main/assets/logo.png
+    # Funzione health-check: database, configurazione dell'invio email di accesso, chiave Resend.
+    url: https://jentlukmtglyfghtozvs.supabase.co/functions/v1/health-check
+    expectedStatusCodes:
+      - 200
 
-  - name: Blinker Network
-    url: https://network.blinker-app.com
-    icon: https://network.blinker-app.com/favicon.ico
-
-  - name: Blinker Merch
-    url: https://merch.blinker-app.com
-    icon: https://merch.blinker-app.com/favicon.ico
-
-  - name: Blinker Business
-    url: https://business.blinker-app.com
-    icon: https://business.blinker-app.com/square.png
-
-  - name: Autenticazione
-    # Slug esplicito = quello che Upptime avrebbe generato dal vecchio nome
-    # "Supabase Auth API", per non perdere la storia/i grafici già raccolti.
+  - name: Accesso e registrazione
     slug: supabase-auth-api
     icon: https://raw.githubusercontent.com/fabioferrero90/blinker-status/main/assets/logo.png
     url: https://jentlukmtglyfghtozvs.supabase.co/auth/v1/health
-    # L'endpoint richiede l'header apikey del gateway Supabase. Questa e'
-    # la chiave "publishable"/anon: per progetto, pensata per essere
-    # pubblica (e' quella usata lato client app), non un segreto.
+    # L'endpoint richiede l'header apikey del gateway Supabase. Questa e' la chiave "publishable": per progetto,
+    # pensata per essere pubblica (e' quella dentro l'app), non un segreto.
     headers:
       - "apikey: sb_publishable_AvEiIGFjLphSe3XqOvCEBA_ayz2M4y7"
     expectedStatusCodes:
       - 200
 
-  - name: Stato generale
-    # Slug esplicito = quello generato dal vecchio nome "Blinker Health Check".
-    slug: blinker-health-check
-    icon: https://raw.githubusercontent.com/fabioferrero90/blinker-status/main/assets/logo.png
-    url: https://jentlukmtglyfghtozvs.supabase.co/functions/v1/health-check
-    expectedStatusCodes:
-      - 200
-
-  - name: Invio notifiche email
-    # Slug esplicito = quello generato dal vecchio nome "Invio Email (Resend)".
+  - name: Email (conferme, password e notifiche)
     slug: invio-email-resend
     icon: https://raw.githubusercontent.com/fabioferrero90/blinker-status/main/assets/logo.png
     url: https://jentlukmtglyfghtozvs.supabase.co/functions/v1/health-check?check=email
     expectedStatusCodes:
       - 200
 
-  - name: Certificato SSL blinker-app.com
-    # Il check ssl apre una connessione TLS diretta: vuole solo l'hostname,
-    # NON uno schema https:// (altrimenti e' un errore DNS, non un vero down).
+  - name: Sito blinker-app.com
+    slug: blinker-app-sito
+    url: https://blinker-app.com
+    icon: https://blinker-app.com/favicon.ico
+
+  - name: Pagina per scaricare l'app
+    slug: blinker-landing-get
+    url: https://get.blinker-app.com
+    icon: https://get.blinker-app.com/favicon.ico
+
+  - name: Blinker Business
+    slug: blinker-business
+    url: https://business.blinker-app.com
+    icon: https://business.blinker-app.com/square.png
+
+  - name: Blinker Network
+    slug: blinker-network
+    url: https://network.blinker-app.com
+    icon: https://network.blinker-app.com/favicon.ico
+
+  - name: Negozio Blinker Merch
+    slug: blinker-merch
+    url: https://merch.blinker-app.com
+    icon: https://merch.blinker-app.com/favicon.ico
+
+  - name: Connessione sicura del sito (certificato)
+    slug: certificato-ssl-blinker-app-com
+    # Il check ssl apre una connessione TLS diretta: vuole solo l'hostname, NON uno schema https://.
     url: blinker-app.com
     check: ssl
 
@@ -65,17 +68,67 @@ status-website:
   cname: status.blinker-app.com
   logoUrl: https://raw.githubusercontent.com/fabioferrero90/blinker-status/main/assets/logo.png
   favicon: https://raw.githubusercontent.com/fabioferrero90/blinker-status/main/assets/logo.png
-  name: Blinker Status
-  introTitle: "**Stato dei servizi Blinker**"
-  introMessage: Monitoraggio in tempo reale di app, siti e servizi dell'ecosistema Blinker. Controlli automatici più volte al giorno.
+  name: Stato dei servizi Blinker
+  introTitle: "**Blinker funziona?**"
+  introMessage: >-
+    Qui vedi se l'app e i siti Blinker funzionano. **Verde**: tutto regolare. **Giallo**: il servizio risponde ma è
+    lento. **Rosso**: il servizio non risponde e ce ne stiamo occupando. I controlli sono automatici e avvengono più
+    volte al giorno: se c'è un problema lo trovi qui sotto, in «Problemi in corso», con gli aggiornamenti. Se qualcosa
+    non funziona ma qui è tutto verde, scrivici a [support@blinker-app.com](mailto:support@blinker-app.com).
   navbar:
-    - title: Download app
+    - title: Scarica l'app
       href: https://get.blinker-app.com
+    - title: Assistenza
+      href: mailto:support@blinker-app.com
 
 # Footer di default di Upptime linka al repo GitHub ("This page is open
 # source..."): lo sovrascriviamo per non esporre il link GitHub in pagina.
 i18n:
   footer: ""
+  liveStatus: Stato attuale
+  allSystemsOperational: Tutti i servizi funzionano
+  activeIncidents: Problemi in corso
+  activeIncidentSummary: Segnalato il $DATE, $POSTS aggiornamenti
+  pastIncidents: Problemi risolti
+  pastIncidentsResolved: Risolto in $MINUTES minuti, $POSTS aggiornamenti
+  incidentReport: "Dettagli del problema #$NUMBER →"
+  incidentTitle: Problema $NUMBER
+  incidentDetails: Dettagli del problema
+  incidentFixed: Risolto
+  incidentOngoing: In corso
+  incidentOpenedAt: Segnalato il
+  incidentClosedAt: Risolto il
+  incidentScheduled: Programmato
+  incidentCompleted: Completato
+  incidentCommentSummary: Aggiornamento del $DATE
+  incidentBack: "← Tutti i problemi"
+  incidentViewOnGitHub: Segui gli aggiornamenti
+  scheduledMaintenance: Manutenzione programmata
+  pastScheduledMaintenance: Manutenzioni passate
+  scheduledMaintenanceSummaryStarted: Iniziata il $DATE, durata prevista $DURATION minuti
+  scheduledMaintenanceSummaryStarts: Inizia il $DATE, durata prevista $DURATION minuti
+  overallUptime: "Disponibilità complessiva: $UPTIME"
+  overallUptimeTitle: Disponibilità
+  averageResponseTime: "Tempo di risposta medio: $TIMEms"
+  averageResponseTimeTitle: Tempo di risposta
+  sevelDayResponseTime: Tempo di risposta negli ultimi 7 giorni
+  responseTimeMs: Tempo di risposta (ms)
+  up: Funziona
+  down: Non risponde
+  degraded: Lento
+  loading: Caricamento
+  duration: Periodo
+  durationAll: sempre
+  durationMin: $DURATION minuti
+  uptimeDay: settimana
+  uptimeWeek: mese
+  uptimeMonth: anno
+  navGitHub: Codice
+  errorTitle: Qualcosa non ha funzionato
+  errorIntro: Non siamo riusciti a leggere lo stato aggiornato dei servizi.
+  errorText: Riprova tra qualche istante.
+  errorHome: Torna alla pagina principale
+  rateLimitExceededTitle: Troppe richieste
 
 # Secret allowlist: niente oltre ai secret di notifica Telegram, già gestiti
 # automaticamente da Upptime (NOTIFICATION_TELEGRAM*). Nessun secret custom
