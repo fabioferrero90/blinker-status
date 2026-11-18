@@ -1,7 +1,7 @@
 url: https://jentlukmtglyfghtozvs.supabase.co/functions/v1/health-check?check=email
 status: up
 code: 200
-responseTime: 195
-lastUpdated: 2026-11-17T04:56:41.332Z
+responseTime: 175
+lastUpdated: 2026-11-18T04:00:21.735Z
 startTime: 2026-10-02T15:05:46.422Z
 generator: Upptime <https://github.com/upptime/upptime>
